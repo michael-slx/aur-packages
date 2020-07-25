@@ -24,7 +24,7 @@ Feel free to submit pull requests, should any severe issues concerning the build
 
 ## License
 
-The `PKGBUILD` files used in the aforementioned packages were created with the help of some templates and utility scripts. As such they'd hardly qualify for copyright. To be sure, treat these files as licensed under CC-0.
+The `PKGBUILD` files used in the aforementioned packages are licensed under CC-0.
 
 Note though that the WeeWX wrapper scripts are derivatives of the originals distributed with WeeWX. [Original licensing applies (GPL 3).](https://github.com/weewx/weewx/blob/master/LICENSE.txt)
 

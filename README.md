@@ -16,6 +16,9 @@ The following packages are provided by Michael:
 |    [**WeeWX**](https://aur.archlinux.org/packages/weewx/)    | http://www.weewx.com/           | Tool for interfacing with weather stations                   |
 | [**python-ephem**](https://aur.archlinux.org/packages/python-ephem/) | https://rhodesmill.org/pyephem/ | Astronomy library for Python                                 |
 | [**OpenTSDB**](https://aur.archlinux.org/packages/opentsdb/) | http://opentsdb.net/            | Distributed, scalable Time Series Database (TSDB) written on top of HBase |
+|  [**HBase**](https://aur.archlinux.org/packages/hbase/) [O]  | https://hbase.apache.org/       | Apache HBase™ is the Hadoop database, a distributed, scalable, big data store. |
+
+[O]: Updated version of orphaned package. Link points to old AUR page. Original licensing applies (see notes below).
 
 ## Contributing
 
@@ -25,7 +28,7 @@ Feel free to submit pull requests, should any severe issues concerning the build
 
 ## License
 
-The `PKGBUILD` files used in the aforementioned packages are licensed under CC-0.
+The `PKGBUILD` files used in the aforementioned packages are licensed under CC-0. Some of the files are updated versions of AUR packages that were orphaned by their original authors. Original copyright applies. The respective maintainers' names are listed in the `PKGBUILD` files.
 
 Note though that the WeeWX wrapper scripts are derivatives of the originals distributed with WeeWX. [Original licensing applies (GPL 3).](https://github.com/weewx/weewx/blob/master/LICENSE.txt)
 

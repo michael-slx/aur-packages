@@ -1,7 +1,7 @@
 pkgbase = hbase
 	pkgdesc = HBase - the Hadoop database
 	pkgver = 2.3.0
-	pkgrel = 2
+	pkgrel = 3
 	url = https://hbase.apache.org
 	install = hbase.install
 	arch = i686

@@ -1,15 +1,14 @@
 pkgbase = hbase
 	pkgdesc = HBase - the Hadoop database
 	pkgver = 2.3.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://hbase.apache.org
 	install = hbase.install
 	arch = i686
 	arch = x86_64
 	license = apache
-	depends = java-environment>=7
+	depends = java-environment>=8
 	backup = etc/hbase/hadoop-metrics2-hbase.properties
-	backup = etc/hbase/hbase-env.cmd
 	backup = etc/hbase/hbase-env.sh
 	backup = etc/hbase/hbase-policy.xml
 	backup = etc/hbase/hbase-site.xml
@@ -21,10 +20,10 @@ pkgbase = hbase
 	source = hbase.service
 	source = hbase-site.xml
 	sha512sums = 5fb64fabfb6ead01527ece6e10be3d953681d09d6295883c966379f716c62e2fc289ae59609d7c1fe01296258e456d85516b7cfab0b962057a6713db6401a127
-	sha512sums = a7541e0e6ec55965386b808bedc8914ba68d6b585cff7dcc7bb44723aaba013142bf5dea16d64e13a748b7c1fff8754e437e16ac88c388c49f022a1bd5416cbf
-	sha512sums = 481585f185b2645ec6eb7202f62b3d096540eee23f63e1971a0df6ac23a8d4372c54651ca3b4ab72f02fdca296bb1c2a5f5655b82101c040369f71f7b49d4618
+	sha512sums = aefb012ed7a370305c3d531e2159ced83aa133580b97a5469b49519a3d743c4d51fdaece855dbd751ada456f43ffc6fa78df66442e3f0144551826441a69cd3a
+	sha512sums = 43d421e2f1b0e8330f8564a25cea257f3e7e67afb6ad8ff47c6ebd0af9685c8564090b4f764a9d9d11dc2f88a454de3c2f9ed5c86638fd8c0a498bab3fae1cb5
 	sha512sums = d91949bc5850d97f62a96551ae4904e6b4d591e044b84049773319383b256bf1465cb6a247cb830dd466bc8a1444853829e0a2336ca3d4815a993362a59a34a4
-	sha512sums = 85d5e32c751da08257fea903e1da4b71463e01b3d2aeefc5e33fc6b1f3bc520cee07db1eb5eabf06a385af465e0db1f94c940742d0ff5bb46a8a7bed75d63a61
+	sha512sums = 0b6782087ee0eed822e919f171ef7ce10a3e95d9b2fa56122a37150690d14532c7824f736b1c8f65a22f9369a75ab5803d90736885b840b6571709a033d97ca2
 
 pkgname = hbase
 

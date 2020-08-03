@@ -2,10 +2,17 @@ post_install() {
   getent group 'hbase' >/dev/null || groupadd -r 'hbase'
   getent passwd 'hbase' >/dev/null || useradd -r -g 'hbase' -d '/etc/hbase' 'hbase'
 
+  install -d \
+    "/etc/hbase" \
+    "/tmp/hbase" \
+    "/var/lib/hbase" \
+    "/var/log/hbase" \
+    "/var/run/hbase"
   chown -R 'hbase:hbase' '/etc/hbase'
-  chown -R 'hbase:hbase' '/var/log/hbase'
-  chown -R 'hbase:hbase' '/var/lib/hbase'
   chown -R 'hbase:hbase' '/tmp/hbase'
+  chown -R 'hbase:hbase' '/var/lib/hbase'
+  chown -R 'hbase:hbase' '/var/log/hbase'
+  chown -R 'hbase:hbase' '/var/run/hbase'
 }
 
 post_remove() {

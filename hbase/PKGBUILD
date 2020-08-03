@@ -11,7 +11,6 @@ license=('apache')
 depends=('java-environment>=8')
 backup=(
   "etc/${pkgname}/hadoop-metrics2-hbase.properties"
-  "etc/${pkgname}/hbase-env.cmd"
   "etc/${pkgname}/hbase-env.sh"
   "etc/${pkgname}/hbase-policy.xml"
   "etc/${pkgname}/hbase-site.xml"
@@ -27,16 +26,19 @@ source=(
   'hbase-site.xml'
 )
 sha512sums=('5fb64fabfb6ead01527ece6e10be3d953681d09d6295883c966379f716c62e2fc289ae59609d7c1fe01296258e456d85516b7cfab0b962057a6713db6401a127'
-            'b346cad56263965e49f5cffb020776a1749e40199aadd1ca47f0284f312acc49164e0513272221ac8152ca1624c986b5ebf977528129be8bcf668d31ad39f41e'
-            '87be4f1d98ed33ff55117af09eed636ad99ca004666f4f0602e059ddc985e63466182465ab923052b2c9b474aea4f80f1ee39194642c39442c9b30d97727abd9'
+            'aefb012ed7a370305c3d531e2159ced83aa133580b97a5469b49519a3d743c4d51fdaece855dbd751ada456f43ffc6fa78df66442e3f0144551826441a69cd3a'
+            '43d421e2f1b0e8330f8564a25cea257f3e7e67afb6ad8ff47c6ebd0af9685c8564090b4f764a9d9d11dc2f88a454de3c2f9ed5c86638fd8c0a498bab3fae1cb5'
             'd91949bc5850d97f62a96551ae4904e6b4d591e044b84049773319383b256bf1465cb6a247cb830dd466bc8a1444853829e0a2336ca3d4815a993362a59a34a4'
             '0b6782087ee0eed822e919f171ef7ce10a3e95d9b2fa56122a37150690d14532c7824f736b1c8f65a22f9369a75ab5803d90736885b840b6571709a033d97ca2')
 _watch="https://hbase.apache.org/downloads.html"
 
 package() {
   cd "$srcdir/${pkgname}-${pkgver}"
-  install -d "$pkgdir/usr/bin" "$pkgdir/opt" "$pkgdir/etc/hbase" "$pkgdir/usr/lib/systemd/system"
-  install -d "$pkgdir/var/log/hbase" "$pkgdir/var/lib/hbase" "$pkgdir/tmp/hbase"
+  install -d \
+    "$pkgdir/etc/hbase" \
+    "$pkgdir/opt" \
+    "$pkgdir/usr/bin" \
+    "$pkgdir/usr/lib/systemd/system"
   cp -r "$srcdir/${pkgname}-${pkgver}" "$pkgdir/opt/hbase"
 
   cd "$pkgdir/usr/bin"

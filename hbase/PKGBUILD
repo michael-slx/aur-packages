@@ -3,7 +3,7 @@
 
 pkgname='hbase'
 pkgver=2.3.0
-pkgrel=3
+pkgrel=4
 pkgdesc='HBase - the Hadoop database'
 arch=('i686' 'x86_64')
 url='https://hbase.apache.org'

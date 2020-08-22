@@ -5,8 +5,10 @@ After=network.target
 [Service]
 Type=forking
 Environment=JAVA_HOME=/usr/lib/jvm/default
+Environment=HBASE_HOME=/opt/hbase
 Environment=HBASE_CONF_DIR=/etc/hbase
 Environment=HBASE_LOG_DIR=/var/log/hbase
+Environment=HBASE_PID_DIR=/var/run/hbase
 ExecStart=/usr/bin/start-hbase.sh
 ExecStop=/usr/bin/stop-hbase.sh
 User=hbase

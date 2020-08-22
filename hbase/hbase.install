@@ -3,7 +3,6 @@ post_install() {
   getent passwd 'hbase' >/dev/null || useradd -r -g 'hbase' -M -s '/usr/bin/nologin' 'hbase'
 
   declare -a dirs=(
-    "/etc/hbase"
     "/tmp/hbase"
     "/var/lib/hbase"
     "/var/log/hbase"

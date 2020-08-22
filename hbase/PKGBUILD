@@ -26,10 +26,10 @@ source=(
   'hbase-site.xml'
 )
 sha512sums=('3192d22ed15dfc33bb41869fc14a3d4e6b141aff94b21366f63ca750d32b1eed985e491a952990c36ae6d9257b40b52e0829c3f4f5d9bfdfe04ab66293eea76f'
-            '421d026111c356d0bec4b43cfc9d98a28cd182853037c228d59264f8758024771c52fe001195fe14785f7fe89d0d1d2ac37e9cd4418bd6a3d13d6b27d13d70c9'
+            '38db08094c63977fd21ee6afa806b474196697549c1f9418d902617d821676f452997ac5164401847a36deeef721f43dc146bf697f4a2979dcd370fd8f200d75'
             '43d421e2f1b0e8330f8564a25cea257f3e7e67afb6ad8ff47c6ebd0af9685c8564090b4f764a9d9d11dc2f88a454de3c2f9ed5c86638fd8c0a498bab3fae1cb5'
-            'd91949bc5850d97f62a96551ae4904e6b4d591e044b84049773319383b256bf1465cb6a247cb830dd466bc8a1444853829e0a2336ca3d4815a993362a59a34a4'
-            '0b6782087ee0eed822e919f171ef7ce10a3e95d9b2fa56122a37150690d14532c7824f736b1c8f65a22f9369a75ab5803d90736885b840b6571709a033d97ca2')
+            'ebc4b05a55f03fa75b7b37961e9a3d1389ef4b051f6e02ec36363cac7d3f5aa4c799aa90b01548ada385d02c9f97f30c0908a2f7e88efbb0d2cfe594d6654717'
+            '25e0b5a7ba3165d2c1dcb842a83eea3d975066e30f17fa9f8273ed36b2e4e79fec34f9a9ecbd2e5c5a35946b6e73e05a031443b967cad78e5ce48ec9657bbd6a')
 _watch="https://hbase.apache.org/downloads.html"
 
 package() {
@@ -49,6 +49,7 @@ package() {
   install -Dm755 "$srcdir/hbase.profile" "$pkgdir/etc/profile.d/hbase.sh"
   install -Dm644 "$srcdir/hbase.service" "$pkgdir/usr/lib/systemd/system/hbase.service"
   install -Dm644 "$srcdir/${pkgname}-${pkgver}/conf"/* "$pkgdir/etc/hbase"
+  rm "$pkgdir/etc/hbase/hbase-env.cmd"
   install -Dm644 "$srcdir/hbase-site.xml" "$pkgdir/etc/hbase/hbase-site.xml"
 
   cd "$pkgdir/opt/hbase"

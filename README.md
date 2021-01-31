@@ -14,7 +14,6 @@ The following packages are provided by Michael:
 |                       Name (AUR link)                        | Upstream                        | Description                                                  |
 | :----------------------------------------------------------: | ------------------------------- | ------------------------------------------------------------ |
 |    [**WeeWX**](https://aur.archlinux.org/packages/weewx/)    | http://www.weewx.com/           | Tool for interfacing with weather stations                   |
-| [**python-ephem**](https://aur.archlinux.org/packages/python-ephem/) | https://rhodesmill.org/pyephem/ | Astronomy library for Python                                 |
 | [**OpenTSDB**](https://aur.archlinux.org/packages/opentsdb/) | http://opentsdb.net/            | Distributed, scalable Time Series Database (TSDB) written on top of HBase |
 |  [**HBase**](https://aur.archlinux.org/packages/hbase/) [O]  | https://hbase.apache.org/       | Apache HBase™ is the Hadoop database, a distributed, scalable, big data store. |
 

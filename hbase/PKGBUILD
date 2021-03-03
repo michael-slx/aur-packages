@@ -2,7 +2,7 @@
 # Contributor: Evan Goldenberg <evangoldenberg@gmail.com>
 
 pkgname='hbase'
-pkgver=2.4.0
+pkgver=2.4.1
 pkgrel=1
 pkgdesc='HBase - the Hadoop database'
 arch=('any')
@@ -25,11 +25,11 @@ source=(
   'hbase.service'
   'hbase-site.xml'
 )
-sha512sums=('e9bc5f2d7d367b5a73e56613fb21bb011a70146ff50d755474853b019e0c4477d3342210fcfcaf9fd1d0088cd0da89c721890df008fd0997cc25be36bf0ab4ba'
-            '38db08094c63977fd21ee6afa806b474196697549c1f9418d902617d821676f452997ac5164401847a36deeef721f43dc146bf697f4a2979dcd370fd8f200d75'
-            '43d421e2f1b0e8330f8564a25cea257f3e7e67afb6ad8ff47c6ebd0af9685c8564090b4f764a9d9d11dc2f88a454de3c2f9ed5c86638fd8c0a498bab3fae1cb5'
-            'ebc4b05a55f03fa75b7b37961e9a3d1389ef4b051f6e02ec36363cac7d3f5aa4c799aa90b01548ada385d02c9f97f30c0908a2f7e88efbb0d2cfe594d6654717'
-            '25e0b5a7ba3165d2c1dcb842a83eea3d975066e30f17fa9f8273ed36b2e4e79fec34f9a9ecbd2e5c5a35946b6e73e05a031443b967cad78e5ce48ec9657bbd6a')
+sha512sums=('5afb643c2391461619516624168e042b42a66e25217a3319552264c6af522e3a21a5212bfcba759b7b976794648ef13ee7b5a415f33cdb89bba43d40162aa685'
+            'SKIP'
+            'SKIP'
+            'SKIP'
+            'SKIP')
 _watch="https://hbase.apache.org/downloads.html"
 
 package() {

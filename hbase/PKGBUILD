@@ -1,8 +1,18 @@
 # Maintainer: Michael Schantl <floss at schantl dash lx dot at>
 # Contributor: Evan Goldenberg <evangoldenberg@gmail.com>
 
+# Supports automatic update checking
+
 pkgname='hbase'
-pkgver=2.4.1
+_MAJOR=2
+_MINOR=4
+_PATCH=1
+pkgver=$_MAJOR.$_MINOR.$_PATCH
+
+function _dl_url {
+  echo "https://downloads.apache.org/$pkgname/$1.$2.$3/$pkgname-$1.$2.$3-bin.tar.gz"
+}
+
 pkgrel=1
 pkgdesc='HBase - the Hadoop database'
 arch=('any')
@@ -19,7 +29,7 @@ backup=(
 )
 install="${pkgname}.install"
 source=(
-  "https://downloads.apache.org/hbase/$pkgver/hbase-$pkgver-bin.tar.gz"
+  "$(_dl_url $_MAJOR $_MINOR $_PATCH)"
   'hbase.install'
   'hbase.profile'
   'hbase.service'

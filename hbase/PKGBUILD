@@ -10,7 +10,7 @@ _PATCH=1
 pkgver=$_MAJOR.$_MINOR.$_PATCH
 
 function _dl_url {
-  echo "https://downloads.apache.org/$pkgname/$1.$2.$3/$pkgname-$1.$2.$3-bin.tar.gz"
+  echo "http://archive.apache.org/dist/$pkgname/$1.$2.$3/$pkgname-$1.$2.$3-bin.tar.gz"
 }
 
 pkgrel=1

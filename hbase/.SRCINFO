@@ -1,6 +1,6 @@
 pkgbase = hbase
 	pkgdesc = HBase - the Hadoop database
-	pkgver = 2.4.2
+	pkgver = 2.4.3
 	pkgrel = 1
 	url = https://hbase.apache.org
 	install = hbase.install
@@ -13,16 +13,15 @@ pkgbase = hbase
 	backup = etc/hbase/hbase-site.xml
 	backup = etc/hbase/log4j.properties
 	backup = etc/hbase/regionservers
-	source = http://archive.apache.org/dist/hbase/2.4.2/hbase-2.4.2-bin.tar.gz
+	source = http://archive.apache.org/dist/hbase/2.4.3/hbase-2.4.3-bin.tar.gz
 	source = hbase.install
 	source = hbase.profile
 	source = hbase.service
 	source = hbase-site.xml
-	sha512sums = 1c3399ecc0f4e6eab990f5a1a6b869b09850e8bd94eabe5fcfab62cce83b03680cc00fe6d601d5c0a356a03d08d56556e214198ebe6333e819cced57e2fecd9b
+	sha512sums = 28ed151d43db55817b29f27cabe37bd072273e48fcd7d31f9743583de34987b95bbcf78f0ab7f83fca09dea2b617bdcf392fd6d761d348d4ab87f47aaa1cfdc2
 	sha512sums = SKIP
 	sha512sums = SKIP
 	sha512sums = SKIP
 	sha512sums = SKIP
 
 pkgname = hbase
-

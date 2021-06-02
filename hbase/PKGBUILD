@@ -18,7 +18,7 @@ pkgdesc='HBase - the Hadoop database'
 arch=('any')
 url='https://hbase.apache.org'
 license=('apache')
-depends=('java-environment>=8')
+depends=('java-environment>=8' 'bash')
 backup=(
   "etc/${pkgname}/hadoop-metrics2-hbase.properties"
   "etc/${pkgname}/hbase-env.sh"

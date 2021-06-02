@@ -7,6 +7,7 @@ pkgbase = hbase
 	arch = any
 	license = apache
 	depends = java-environment>=8
+	depends = bash
 	backup = etc/hbase/hadoop-metrics2-hbase.properties
 	backup = etc/hbase/hbase-env.sh
 	backup = etc/hbase/hbase-policy.xml

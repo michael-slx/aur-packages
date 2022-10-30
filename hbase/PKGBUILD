@@ -6,7 +6,7 @@
 pkgname='hbase'
 _MAJOR=2
 _MINOR=5
-_PATCH=0
+_PATCH=1
 pkgver=$_MAJOR.$_MINOR.$_PATCH
 
 function _dl_url {
@@ -24,7 +24,6 @@ backup=(
   "etc/${pkgname}/hbase-env.sh"
   "etc/${pkgname}/hbase-policy.xml"
   "etc/${pkgname}/hbase-site.xml"
-  "etc/${pkgname}/log4j.properties"
   "etc/${pkgname}/regionservers"
 )
 install="${pkgname}.install"
@@ -35,7 +34,7 @@ source=(
   'hbase.service'
   'hbase-site.xml'
 )
-sha512sums=('1e0ebf9a457a8ed59a0e1ea06eaa6019f63575c317588175f18ee2506cf0e527516952cb026db84d4af890be35f74c29f8e87c41e0dcf99393c09bd48668e16f'
+sha512sums=('102573b8f1c78993573836bee3cf2647bd5ed91a8e952dbf0f6a28ac6c85769036ff7f68101ea17d1acf71eef27c59a7118e70a7aacb231864e106defd3f72ce'
             'SKIP'
             'SKIP'
             'SKIP'

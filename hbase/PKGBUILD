@@ -6,7 +6,7 @@
 pkgname='hbase'
 _MAJOR=2
 _MINOR=5
-_PATCH=7
+_PATCH=8
 pkgver=$_MAJOR.$_MINOR.$_PATCH
 
 function _dl_url {
@@ -34,7 +34,7 @@ source=(
   'hbase.service'
   'hbase-site.xml'
 )
-sha512sums=('80ae07db5eaf662677f763529887e7186473ad1a75a00e2ebeec3344018527ef58d146237f38c7968560594f88b93c1e7c06824c879594200143a5753904a943'
+sha512sums=('414fec9b3bf968cf977955ce9eab5eb20e57b8b817eac3d0ebcd11671cf5122b17818006c37e970d9ea8829a87c4d6cfe1604ed6e1affa8df11a77d075f77bbe'
             'SKIP'
             'SKIP'
             'SKIP'

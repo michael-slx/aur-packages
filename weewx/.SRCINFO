@@ -1,7 +1,7 @@
 pkgbase = weewx
 	pkgdesc = Software for logging data from weather stations
 	pkgver = 5.0.2
-	pkgrel = 2
+	pkgrel = 3
 	url = http://www.weewx.com/
 	arch = any
 	license = GPL-3.0-or-later

@@ -14,7 +14,7 @@ function _dl_url {
   echo "https://github.com/weewx/weewx/archive/refs/tags/v$1.$2.$3.tar.gz"
 }
 
-pkgrel=1
+pkgrel=2
 pkgdesc="Software for logging data from weather stations"
 arch=("any")
 url="http://www.weewx.com/"
@@ -27,12 +27,10 @@ makedepends=("mkdocs"
              "python-configobj")
 source=("$pkgbase-$pkgver.tar.xz::$(_dl_url $_MAJOR $_MINOR $_PATCH)"
         "weewx.sysusers"
-        "weewx.tmpfiles"
-        "weewx.service")
+        "weewx.tmpfiles")
 sha512sums=('520ba2a394c91b66997969695552d9aa8ebbd440b192e0cf8064c36d6a3691a670ce431f688373cf3c51c27933180f8202793163e5a034916eec52e3e1ad3ef2'
             '6015b870143f6b8ae094b3f94ad53323be8a083f11c177dc508315fb3bbc20dd318124e6ccd41ba9d0388828e18c4b4ae6ce7c4a35ac0cab442eca9e8bbbca2d'
-            'e97b287acf53c55d30f4e1a4d533fe5c649fac44080095fa1052f6f1cc9a55b6b0592d63c63a4a241e7007894e882648d5c4c4a221da69666e284637c5a3e15e'
-            '4744fec4faf63b36f9c82a7404e4ecc749eb07e8d90640465ff7a2ae20cdb2560348b0a125467fad215d0e51d88d27a991dc0196899e53d19479dec942d6e52d')
+            'e97b287acf53c55d30f4e1a4d533fe5c649fac44080095fa1052f6f1cc9a55b6b0592d63c63a4a241e7007894e882648d5c4c4a221da69666e284637c5a3e15e')
 _watch="http://www.weewx.com/downloads/"
 
 build() {
@@ -130,7 +128,11 @@ package_weewx() {
   chmod 644 "$etcdir/weewx.conf"
 
   echo "Creating systemd unit"
-  install -Dm644 "$srcdir/weewx.service" "$unitdir/weewx.service"
+  [[ -d "$unitdir" ]] || mkdir -p "$unitdir"
+  sed \
+    -e "s%StandardError=journal+console%StandardError=journal%" \
+    "$srcdir/$pkgbase-$pkgver/pkg/etc/systemd/system/weewx.service" > "$unitdir/weewx.service"
+  chmod 644 "$unitdir/weewx.service"
 
   echo "Creating system user definition"
   install -Dm644 "$srcdir/weewx.sysusers" "$sysusersdir/weewx.conf"

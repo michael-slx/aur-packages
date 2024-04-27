@@ -5,6 +5,5 @@
 !.gitignore
 !PKGBUILD
 !.SRCINFO
-!weewx.service
 !weewx.sysusers
 !weewx.tmpfiles

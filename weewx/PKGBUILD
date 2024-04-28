@@ -14,7 +14,7 @@ function _dl_url {
   echo "https://github.com/weewx/weewx/archive/refs/tags/v$1.$2.$3.tar.gz"
 }
 
-pkgrel=3
+pkgrel=4
 pkgdesc="Software for logging data from weather stations"
 arch=("any")
 url="http://www.weewx.com/"
@@ -133,6 +133,10 @@ package_weewx() {
     -e "s%StandardError=journal+console%StandardError=journal%" \
     "$srcdir/$pkgbase-$pkgver/pkg/etc/systemd/system/weewx.service" > "$unitdir/weewx.service"
   chmod 644 "$unitdir/weewx.service"
+  sed \
+    -e "s%StandardError=journal+console%StandardError=journal%" \
+    "$srcdir/$pkgbase-$pkgver/pkg/etc/systemd/system/weewx@.service" > "$unitdir/weewx@.service"
+  chmod 644 "$unitdir/weewx@.service"
 
   echo "Creating system user definition"
   install -Dm644 "$srcdir/weewx.sysusers" "$sysusersdir/weewx.conf"

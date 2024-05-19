@@ -5,8 +5,8 @@
 
 pkgname='hbase'
 _MAJOR=2
-_MINOR=5
-_PATCH=8
+_MINOR=6
+_PATCH=0
 pkgver=$_MAJOR.$_MINOR.$_PATCH
 
 function _dl_url {
@@ -14,10 +14,10 @@ function _dl_url {
 }
 
 pkgrel=1
-pkgdesc='HBase - the Hadoop database'
+pkgdesc='The Hadoop database, a distributed, scalable, big data store.'
 arch=('any')
 url='https://hbase.apache.org'
-license=('apache')
+license=('Apache-2.0')
 depends=('java-environment>=8' 'bash')
 backup=(
   "etc/${pkgname}/hadoop-metrics2-hbase.properties"
@@ -34,7 +34,7 @@ source=(
   'hbase.service'
   'hbase-site.xml'
 )
-sha512sums=('414fec9b3bf968cf977955ce9eab5eb20e57b8b817eac3d0ebcd11671cf5122b17818006c37e970d9ea8829a87c4d6cfe1604ed6e1affa8df11a77d075f77bbe'
+sha512sums=('38ff742e079ed0e08cb5430386021564f67ee5d60419c849c8b621166afa1e3da157041e696ef724dd72d58ac38b12cd1dfa5f390c0d7cc8842b133ece93843b'
             'SKIP'
             'SKIP'
             'SKIP'

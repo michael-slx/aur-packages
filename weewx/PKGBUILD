@@ -14,7 +14,7 @@ function _dl_url {
   echo "https://github.com/weewx/weewx/archive/refs/tags/v$1.$2.$3.tar.gz"
 }
 
-pkgrel=4
+pkgrel=5
 pkgdesc="Software for logging data from weather stations"
 arch=("any")
 url="http://www.weewx.com/"
@@ -119,8 +119,9 @@ package_weewx() {
 
   echo "Creating configuration file"
   [[ -d "$etcdir" ]] || mkdir -p "$etcdir"
+  nl=$'\n'
   sed \
-    -e "/log_failure =.*/aWEEWX_ROOT = $weewx_bindir" \
+    -e "/version =.*/a\\${nl}\\${nl}# Installation path\\${nl}WEEWX_ROOT = $weewx_bindir" \
     -e "s%SKIN_ROOT =.*%SKIN_ROOT = $weewx_sharedir/skins%" \
     -e "s%HTML_ROOT = public_html%HTML_ROOT = $weewx_vardir/www%" \
     -e "s%SQLITE_ROOT = .*%SQLITE_ROOT = $weewx_vardir%" \

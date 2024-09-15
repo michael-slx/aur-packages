@@ -1,7 +1,7 @@
 pkgbase = weewx
 	pkgdesc = Software for logging data from weather stations
 	pkgver = 5.1.0
-	pkgrel = 1
+	pkgrel = 2
 	url = http://www.weewx.com/
 	arch = any
 	license = GPL-3.0-or-later
@@ -11,6 +11,7 @@ pkgbase = weewx
 	makedepends = python
 	makedepends = python-cheetah3
 	makedepends = python-configobj
+	makedepends = python-regex
 	source = weewx-5.1.0.tar.xz::https://github.com/weewx/weewx/archive/refs/tags/v5.1.0.tar.gz
 	source = weewx.sysusers
 	source = weewx.tmpfiles

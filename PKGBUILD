@@ -14,7 +14,7 @@ function _dl_url {
   echo "https://github.com/weewx/weewx/archive/refs/tags/v$1.$2.$3.tar.gz"
 }
 
-pkgrel=1
+pkgrel=2
 pkgdesc="Software for logging data from weather stations"
 arch=("any")
 url="http://www.weewx.com/"
@@ -24,7 +24,8 @@ makedepends=("mkdocs"
              "mkdocs-material-extensions"
              "python"
              "python-cheetah3"
-             "python-configobj")
+             "python-configobj"
+             "python-regex")
 source=("$pkgbase-$pkgver.tar.xz::$(_dl_url $_MAJOR $_MINOR $_PATCH)"
         "weewx.sysusers"
         "weewx.tmpfiles")

@@ -6,7 +6,7 @@
 pkgbase=weewx
 pkgname=("weewx" "weewx-docs")
 _MAJOR=5
-_MINOR=2
+_MINOR=3
 _PATCH=0
 pkgver=$_MAJOR.$_MINOR.$_PATCH
 
@@ -14,7 +14,7 @@ function _dl_url {
   echo "https://github.com/weewx/weewx/archive/refs/tags/v$1.$2.$3.tar.gz"
 }
 
-pkgrel=1
+pkgrel=2
 pkgdesc="Software for logging data from weather stations"
 arch=("any")
 url="http://www.weewx.com/"
@@ -30,7 +30,7 @@ makedepends=("mkdocs"
 source=("$pkgbase-$pkgver.tar.xz::$(_dl_url $_MAJOR $_MINOR $_PATCH)"
         "weewx.sysusers"
         "weewx.tmpfiles")
-sha512sums=('acb0bd145ef241ba429cb75f061f4bfd95e9369ea79edfcca5e8c8ca58dceb23e17c14d9494ea563d39fb123360a70957505f3a1f2d388bb21a9b40a89bcc986'
+sha512sums=('bb4b68907af8ede20760417bf984689f83814a31e2bc3e01e46e9c49c160e7affe2ed51a0198f4e22d1d9eae4b686a923541ee71ba167daa81ef26867b7a357c'
             '6015b870143f6b8ae094b3f94ad53323be8a083f11c177dc508315fb3bbc20dd318124e6ccd41ba9d0388828e18c4b4ae6ce7c4a35ac0cab442eca9e8bbbca2d'
             'e97b287acf53c55d30f4e1a4d533fe5c649fac44080095fa1052f6f1cc9a55b6b0592d63c63a4a241e7007894e882648d5c4c4a221da69666e284637c5a3e15e')
 _watch="http://www.weewx.com/downloads/"
